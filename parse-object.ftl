@@ -80,10 +80,9 @@
       <#break>
   <#default>
 </#switch>
-console.log('loginAction', ${.data_model.realm.internationalizationEnabled?c})
 
-var myExtraData2 = JSON.parse(JSON.stringify(<@parse_object_known object=foo data=[] other=additional other_keys="" />), (key, value) => value === "is_undefined_for_replacement" ? undefined : value);
-console.log('myExtraData2', myExtraData2);
+const myData = JSON.parse(JSON.stringify(<@parse_object_known object=foo data=[] other=additional other_keys="" />), (key, value) => value === "is_undefined_for_replacement" ? undefined : value);
+console.log('myData', myData);
 
 
 
